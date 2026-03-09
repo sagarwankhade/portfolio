@@ -269,6 +269,12 @@ body.light-theme .theme-toggle-thumb {
   color: var(--muted);
 }
 
+.hero-intro {
+  margin: 0 0 0.45rem;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
 .typing-line {
   min-height: 2rem;
   margin: 0.2rem 0 1rem;
