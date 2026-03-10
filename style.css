@@ -559,6 +559,7 @@ body.light-theme .theme-toggle-thumb {
 }
 
 .skills-grid,
+.industries-grid,
 .trust-grid,
 .process-grid,
 .services-grid,
@@ -573,10 +574,71 @@ body.light-theme .theme-toggle-thumb {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.skill-badge {
+.industries-section {
+  padding-top: 1rem;
+}
+
+.industries-heading {
   text-align: center;
+  margin-inline: auto;
+}
+
+.industries-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  overflow: hidden;
+  border-radius: 2rem;
+}
+
+.industry-card {
+  min-height: 13rem;
+  display: grid;
+  place-items: center;
+  gap: 0.8rem;
+  text-align: center;
+  padding: 2rem 1rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.industry-card:nth-child(4n) {
+  border-right: 0;
+}
+
+.industry-card:nth-last-child(-n + 4) {
+  border-bottom: 0;
+}
+
+.industry-icon {
+  font-size: 2.4rem;
+  filter: saturate(1.1);
+}
+
+.industry-card h3 {
+  margin: 0;
+  color: var(--heading);
+  font-size: clamp(1.1rem, 2vw, 1.6rem);
+}
+
+.skill-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
   color: var(--heading);
   font-weight: 700;
+}
+
+.skill-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(116, 242, 206, 0.18), rgba(122, 162, 255, 0.18));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 1rem;
+  flex: 0 0 auto;
 }
 
 .projects-grid {
@@ -796,6 +858,7 @@ body.light-theme .theme-toggle-thumb {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .industries-grid,
   .services-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -855,6 +918,7 @@ body.light-theme .theme-toggle-thumb {
   }
 
   .skills-grid,
+  .industries-grid,
   .solutions-grid,
   .trust-grid,
   .process-grid,
@@ -869,6 +933,10 @@ body.light-theme .theme-toggle-thumb {
 
   .hero-trust {
     gap: 0.65rem;
+  }
+
+  .industry-card {
+    border-right: 0;
   }
 }
 
